@@ -14,7 +14,7 @@ var database = firebase.database();
 
 //Variable for current time
 var currentTime = moment(new Date());
-currentTime = moment().format('HH:mm');
+currentTime = moment().format('HH:mm:ss');
 
 //Button for adding Trains
 $("#add-train").on("click", function() {
@@ -60,7 +60,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     var trainFrequency = childSnapshot.val().frequency;
 
     // Train time converted
-    var trainTimeConverted = moment(childSnapshot.val().time, "HH:mm");
+    var trainTimeConverted = moment(childSnapshot.val().time, "HH:mm:ss");
     console.log(trainTimeConverted);
     // Difference between the times
     var diffTime = moment().diff(moment(trainTimeConverted), "minutes");
@@ -73,7 +73,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     console.log(minutesAway);
     // Next Train Arrival
     var nextTrainArrival = moment().add(minutesAway, "minutes");
-    var nextArrivalConverted = moment(nextTrainArrival).format("HH:mm");
+    var nextArrivalConverted = moment(nextTrainArrival).format("HH:mm:ss");
     console.log(nextArrivalConverted);
     //Add train times to train schedule
     var row = $('<tr>');
