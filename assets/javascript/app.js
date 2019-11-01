@@ -14,7 +14,7 @@ var database = firebase.database();
 
 //Variable for current time
 var currentTime = moment(new Date());
-currentTime = moment().format('HH:mm:ss');
+currentTime = moment().format('HH:mm');
 
 //Button for adding Trains
 $("#add-train").on("click", function() {
