@@ -60,7 +60,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     var trainFrequency = childSnapshot.val().frequency;
 
     // Train time converted
-    var trainTimeConverted = moment(childSnapshot.val().time, "HH:mm:ss");
+    var trainTimeConverted = moment(childSnapshot.val().time, "HH:mm");
     console.log(trainTimeConverted);
     // Difference between the times
     var diffTime = moment().diff(moment(trainTimeConverted), "minutes");
@@ -73,7 +73,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     console.log(minutesAway);
     // Next Train Arrival
     var nextTrainArrival = moment().add(minutesAway, "minutes");
-    var nextArrivalConverted = moment(nextTrainArrival).format("HH:mm:ss");
+    var nextArrivalConverted = moment(nextTrainArrival).format("HH:mm");
     console.log(nextArrivalConverted);
     //Add train times to train schedule
     var row = $('<tr>');
