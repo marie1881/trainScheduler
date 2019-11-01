@@ -1,0 +1,46 @@
+.jumbotron {
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+}
+
+h1 {
+    font-family: 'Staatliches', cursive;
+}
+
+body {
+    background:url(../images/train1.jpeg);
+    margin-bottom: 40px;
+}
+
+.add-train-heading {
+    color: #E6E6E6 !important;
+    font-size: 17px;
+}
+
+.train-schedule {
+    color: #E6E6E6 !important;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.add-train-heading {
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+}
+
+th {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+   
+}
+
+
